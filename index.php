@@ -1,7 +1,7 @@
 <?php
 require_once '/src/Planta.php';
 
-$planta = new Planta('', '', 0.0);
+$planta = new Planta('Suculenta', 'Echeveria elegans', 1.0);
 ?>
 
 
