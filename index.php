@@ -27,30 +27,30 @@ $planta = new Planta('Suculenta', 'Echeveria elegans', 1.0);
         <section class="cartao">
 
             <h2>
-                <!-- Exiba o nome popular da planta. -->
+                <?= htmlspecialchars($planta->getNomePopular(), ENT_QUOTES) // Fica mais semantinco com o html e para dar menos erros  ?>
             </h2>
 
             <div class="informacao">
                 <span class="rotulo">Espécie científica</span>
 
                 <span class="valor">
-                    <!-- Exiba a espécie. -->
+                    <?= htmlspecialchars($planta->getEspecie(), ENT_QUOTES) ?>
                 </span>
             </div>
 
             <div class="informacao">
-                <span class="rotulo">Água recomendada por dia</span>
+                <span class="rotulo">Água recomendada por dia (L)</span>
 
                 <span class="valor">
-                    <!-- Exiba a quantidade diária em ml. -->
+                     <?= htmlspecialchars($planta->getAguaPorDia(),ENT_QUOTES ) ?>
                 </span>
             </div>
 
             <div class="destaque">
-                <strong>Recomendação para sete dias</strong>
+                <strong>Recomendação para sete dias (L)</strong>
 
                 <p>
-                    <!-- Exiba a quantidade calculada para sete dia -->
+                     <?= htmlspecialchars($planta->getAguaPorSemana(),ENT_QUOTES) ?>
                 </p>
             </div>
 
